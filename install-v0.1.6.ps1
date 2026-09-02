@@ -9,11 +9,11 @@ param(
 $ErrorActionPreference = 'Stop'
 Set-StrictMode -Version 2.0
 
-$packageVersion = '0.1.5'
-$packageName = 'HW-Lean-Guard-v0.1.5-Innessco.zip'
-$packageRootName = 'HW-Lean-Guard-v0.1.5-Innessco'
-$packageUri = 'https://github.com/HenryWilliam-Git/hw-lean-guard-installer/releases/download/v0.1.5/HW-Lean-Guard-v0.1.5-Innessco.zip'
-$expectedPackageSha256 = 'ab3c11611d221e691003b512067878a0c11580349d93483aab4c2bd85288bc76'
+$packageVersion = '0.1.6'
+$packageName = 'HW-Lean-Guard-v0.1.6-Innessco.zip'
+$packageRootName = 'HW-Lean-Guard-v0.1.6-Innessco'
+$packageUri = 'https://github.com/HenryWilliam-Git/hw-lean-guard-installer/releases/download/v0.1.6/HW-Lean-Guard-v0.1.6-Innessco.zip'
+$expectedPackageSha256 = 'f95d4b17b6ba03fcf60e8406de3cb600cf225ae41ffc04f90c339ee954ff731c'
 
 function Assert-SafeLeanGuardArchive {
   param(
@@ -62,7 +62,7 @@ try {
   }
 
   $actualPackageSha256 = (Get-FileHash -LiteralPath $zipPath -Algorithm SHA256).Hash.ToLowerInvariant()
-  if ($actualPackageSha256 -cne $expectedPackageSha256) { throw 'Downloaded package SHA-256 does not match the pinned v0.1.5 artifact.' }
+  if ($actualPackageSha256 -cne $expectedPackageSha256) { throw 'Downloaded package SHA-256 does not match the pinned v0.1.6 artifact.' }
   Assert-SafeLeanGuardArchive -Path $zipPath -ExpectedRoot $packageRootName
 
   $previousProgressPreference = $ProgressPreference
