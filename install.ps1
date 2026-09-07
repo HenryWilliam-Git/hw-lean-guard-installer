@@ -13,7 +13,7 @@ $packageVersion = '0.1.8'
 $packageName = 'HW-Lean-Guard-v0.1.8-Innessco.zip'
 $packageRootName = 'HW-Lean-Guard-v0.1.8-Innessco'
 $packageUri = 'https://github.com/HenryWilliam-Git/hw-lean-guard-installer/releases/download/v0.1.8/HW-Lean-Guard-v0.1.8-Innessco.zip'
-$expectedPackageSha256 = '9befbd17e96091ed9ca964b2ee19a265c817578a39d9e78c6bd032eb1c5341a6'
+$expectedPackageSha256 = 'be40d1bb9516fdee47d6ce1a77ccb5adff37a009269cb6334528b5f9a7a0b2af'
 
 function Assert-SafeLeanGuardArchive {
   param(
