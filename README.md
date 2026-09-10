@@ -21,7 +21,7 @@ First confirm Claude `/status` shows `Enterprise managed settings (remote)`. Run
 
 The command verifies the exact tag, immutable publication state, HTTPS transport and GitHub asset SHA-256 before executing the downloaded bootstrap. It requests UAC for machine installation and restores the signed-in user's Workbench policy. Replace `-ServerManagedPolicyConfirmed` with `-ValidateOnly` for a download-and-validation preview with no installation.
 
-Use the [operator handoff](production-handoff.md) for readback and rollback. Organization instructions, server-managed hooks, FSLogix and fleet assignment remain separate controls. Do not substitute a `releases/latest` URL when selecting this rollback version.
+After installation, verify version 0.2.0, installed-file hashes, detection checks and the existing Workbench policy. Preserve the prior verified package for owner-approved rollback. Organization instructions, server-managed hooks, FSLogix and fleet assignment remain separate controls. Do not substitute a `releases/latest` URL when selecting this rollback version.
 
 The repository alias and versioned bootstrap are byte-identical. Existing immutable releases remain preserved.
 
